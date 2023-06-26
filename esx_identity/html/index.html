@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- <script src="nui://game/ui/jquery.js"></script> -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/682e025cf7.js" crossorigin="anonymous"></script>
+    <link href="css/style.css" rel="stylesheet" />
+
+    <title>WX Identity</title>
+  </head>
+
+  <body">
+    <div class="dialog">
+      <div class="title"><b>NEW CHARACTER</b></div>
+      <form id="register" name="register" action="#">
+        <!-- <img src="logo.png"> Add your own image/logo here  -->
+        <div class="up"><i class="fa-solid fa-user"></i> First Name</div>
+        <input
+          id="firstname"
+          type="text"
+          class=""
+          name="firstname"
+          placeholder="Carlo Espozanto"
+          minlength="3"
+          maxlength="25"
+          pattern="[a-z A-Z]*"
+        /><br />
+        <div class="up"><i class="fa-solid fa-user"></i> Last Name</div>
+        <input
+          id="lastname"
+          type="text"
+          class=""
+          name="lastname"
+          placeholder="Rodriguez"
+          minlength="3"
+          maxlength="15"
+          pattern="[a-zA-Z]*"
+        /><br />
+        <div class="up"><i class="fa-solid fa-calendar-days"></i> Date of Birth</div>
+        <input
+          id="dateofbirth"
+          type="date"
+          name="dateofbirth"
+          class=""
+          min="1900-01-01"
+          max="2010-01-01"
+          onfocus="(this.type='date')"
+        /><br />
+        <div class="up"><i class="fa-solid fa-arrows-up-down"></i> Height</div>
+        <input
+          id="height"
+          type="number"
+          class=""
+          name="height"
+          min="120"
+          max="220"
+          placeholder="180 (cm)"
+        /><br />
+        <center>
+          <div class="radio-toolbar">
+            <input type="radio" id="radiom" name="sex" value="m" checked />
+            <label for="radiom"><i class="fa-solid fa-mars"></i> Male</label>
+
+            <input type="radio" id="radiof" name="sex" value="f" />
+            <label for="radiof"><i class="fa-solid fa-venus"></i> Female</label>
+          </div>
+        </center>
+        <button id="submit" type="submit">
+          <font size="4px"><i class="fa-solid fa-address-card"></i> Create Character</font>
+        </button>
+      </form>
+      <center>
+
+      </center>
+    </div>
+    
+    <script>
+      function TriggeredKey(e) {
+        var keycode;
+        if (window.event) keycode = window.event.keyCode;
+        if (window.event.keyCode == 13 || window.event.keyCode == 27)
+          return false;
+      }
+    </script>
+    <script src="js/script.js"></script>
+  </body>
+</html>
